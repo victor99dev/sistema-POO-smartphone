@@ -59,7 +59,7 @@ nokia.Ligar();
 nokia.ReceberLigacao();
 nokia.InstalarAplicativo("Deezer");
 ```
-Por fim no Program informo o que se pede para poder da o Dotnet Run que nos retorna a seguinte resposta:
+Por fim no Program.cs informo o que se pede e faço um ```dotnet run``` que nos retorna a seguinte resposta:
 ```
 Smartphone iphone:
 Ligando...
