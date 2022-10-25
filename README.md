@@ -1,22 +1,82 @@
-# DIO - Trilha .NET - Programação orientada a objetos
-www.dio.me
+# 💻 | Projeto: POO - Desafio DIO.
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
+### Projeto integrador feito para por em prática as de C#:
 
-## Contexto
-Você é responsável por modelar um sistema que trabalha com celulares. Para isso, foi solicitado que você faça uma abstração de um celular e disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+Seja bem vindo ao meu projeto chamado "Criando um Sistema e Abstraindo um Celular com POO", feito totalmente para meus estudos e aperfeiçoamento como profissional. ❤️
 
-## Proposta
-Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
-Você deve criar as suas classes de acordo com o diagrama abaixo:
+- Colocando em prática conceitos obtidos durante a aula.
 
-![Diagrama classes](Imagens/diagrama.png)
+- Utilizando a linguagem: C#.
 
-## Regras e validações
-1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
+### 🎬 | Preview:
+Foi inserido o que se pedia nos comentarios TODO.
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+Um exemplo irei informar aqui foi por o metodo Instalar Aplicativo.
+
+
+```cs
+public Iphone(string numero, string modelo, string imei, int memoria) : base(numero, modelo, imei, memoria)
+        {
+        }
+
+public override void InstalarAplicativo(string nomeApp)
+        {
+            Console.WriteLine($"Instalando aplicativo: {nomeApp} via AppStore no Iphone");
+        }
+```
+
+E aqui informo as propriedades presentes no diagrama mais o construtor.
+```cs
+ public abstract class Smartphone
+    {
+        public string Numero { get; set; }
+        public string Modelo { get; set; }
+        public string IMEI { get; set; }
+        public int Memoria { get; set; }
+
+    public Smartphone(string numero, string modelo, string imei, int memoria)
+    {
+        Numero = numero;
+        Modelo = modelo;
+        IMEI = imei;
+        Memoria = memoria;
+    }
+```
+
+O código como se pede também é o dispositivo Nokia, afinal ele pede maneiras de diferentes marcas e modelos terem seu próprio comportamento.
+```cs
+Console.WriteLine("Smartphone iphone:");
+Iphone iphone = new Iphone(numero: "1", modelo: "A", imei: "1",memoria: 9);
+iphone.Ligar();
+iphone.ReceberLigacao();
+iphone.InstalarAplicativo("Spotify");
+
+/*-----------------------------------> <-----------------------------------*/
+
+Console.WriteLine("Smartphone Nokia:");
+Nokia nokia = new Nokia(numero: "2", modelo: "B", imei: "2",memoria: 15);
+nokia.Ligar();
+nokia.ReceberLigacao();
+nokia.InstalarAplicativo("Deezer");
+```
+Por fim no Program informo o que se pede para poder da o Dotnet Run que nos retorna a seguinte resposta:
+```
+Smartphone iphone:
+Ligando...
+Recebendo ligação...
+Instalando aplicativo: Spotify via AppStore no Iphone
+```
+
+<b>Segue a lista de commits para verificar o que foi alterado e incrementado!</b>
+
+<b>[Certificado do Projeto](https://www.dio.me/certificate/FFC7D9C8/share)</b>
+
+## 👩‍💻 Meus Links:
+
+- Github: [Victor Hugo.](https://github.com/torugo99)
+- LinkedIn: [Victor Hugo.](https://www.linkedin.com/in/victor-hugo99/)
+- Meu Site: [Victor99dev.](http://victor99dev.site/)
+
+### 😀 | Créditos e Agradecimentos:
+
+- Obrigado a DIO a essa oportunidade de UP na minha carreira! ❤️

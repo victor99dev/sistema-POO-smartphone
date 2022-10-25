@@ -7,29 +7,29 @@ namespace DesafioPOO.Models
         public string IMEI { get; set; }
         public int Memoria { get; set; }
 
-    public Smartphone(string numero, string modelo, string imei, int memoria)
-    {
-        Numero = numero;
-        Modelo = modelo;
-        IMEI = imei;
-        Memoria = memoria;
-    }
+        public Smartphone(string numero, string modelo, string imei, int memoria)
+        {
+            Numero = numero;
+            Modelo = modelo;
+            IMEI = imei;
+            Memoria = memoria;
+        }
 
-    protected Smartphone(string numero)
-    {
-        Numero = numero;
-    }
+        protected Smartphone(string numero)
+        {
+            Numero = numero;
+        }
 
-    public void Ligar()
-    {
-        Console.WriteLine("Ligando...");
-    }
+        public void Ligar()
+        {
+            Console.WriteLine("Ligando...");
+        }
 
-    public void ReceberLigacao()
-    {
-        Console.WriteLine("Recebendo ligação...");
-    }
+        public void ReceberLigacao()
+        {
+            Console.WriteLine("Recebendo ligação...");
+        }
 
-    public abstract void InstalarAplicativo(string nomeApp);
+        public abstract void InstalarAplicativo(string nomeApp);
     }
 }
